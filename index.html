@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|Concert+One|Eczar|Fruktur|Kavoon|Neuton|Space+Mono|Tillana|Work+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <h1>UFO</h1>
+    <h4>I wanted to make something a little silly but still a little complicated. A UFO was perfect!
+       It was silly because I could make a cow disapear and complicated because it was a  long strong of animations to make the cow disapear.
+       I have some stars and a moon in the background to give affect and I have another cow moving back and forth minding its own buissness</h4>
+    <svg width="1325" height="1025" veiwBox="0 0 1325 1325 " style="background-color:white">
+      <rect x="0" y="950" width="1325" height="200" fill="green"/>
+        <rect x="0" y="0" width="1325" height="950" fill="#35343d"/>
+        <circle r="10" cy="159" cx="95" fill="white"/>
+        <circle r="10" cy="122" cx="900" fill="white"/>
+        <circle r="10" cy="50" cx="523" fill="white"/>
+        <circle r="10" cy="450" cx="10" fill="white">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 655 350" to="180 655 350" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="100" cy="100" cx="1225" fill="white"/>
+        <image xlink:href="http://res.cloudinary.com/urbandictionary/image/upload/a_exif,c_fit,h_200,w_200/v1394562487/blblqxztordha1lywmqc.jpg" opacity="0" width="200" height="200" y="0" x="1125">
+            <animate attributeName="opacity" from="0" to="1" begin="mouseover" dur="2s" />
+        </image>
+
+
+
+        <ellipse cx="650" cy="250" rx="300" ry="150" fill="blue"/>
+        <ellipse cx="650" cy="350" rx="600" ry="150" fill="black" opacity="1"/>
+        <circle r="10" cy="350" cx="80" fill="gray"/>
+
+        <circle r="10" cy="350" cx="1230" fill="gray"/>
+        <circle r="10" cy="250" cx="280" fill="gray"/>
+        <circle r="10" cy="270" cx="200" fill="gray"/>
+        <circle r="10" cy="300" cx="130" fill="gray"/>
+        <circle r="10" cy="240" cx="350" fill="gray"/>
+        <circle r="10" cy="230" cx="420" fill="gray"/>
+        <circle r="10" cy="225" cx="490" fill="gray"/>
+        <circle r="10" cy="220" cx="560" fill="gray"/>
+        <circle r="10" cy="220" cx="630" fill="gray"/>
+        <circle r="10" cy="220" cx="700" fill="gray"/>
+        <circle r="10" cy="225" cx="770" fill="gray"/>
+        <circle r="10" cy="230" cx="840" fill="gray"/>
+        <circle r="10" cy="235" cx="910" fill="gray"/>
+        <circle r="10" cy="245" cx="980" fill="gray"/>
+        <circle r="10" cy="260" cx="1050" fill="gray"/>
+        <circle r="10" cy="275" cx="1120" fill="gray"/>
+        <circle r="10" cy="300" cx="1190" fill="gray"/>
+        <ellipse r="1" cy="400" cx="650" rx="1" ry="1" fill="yellow">
+          <animate attributeName="rx" from="1" to="100" dur="2s" begin="clickedOn.end" fill="freeze"/>
+          <animate id="hatchOpen" attributeName="ry" from="1" to="10" dur="2s" begin="clickedOn.end"fill="freeze"/>
+        </ellipse>
+        <line x1="650" y1="400" x2="650" y2="400" stroke="yellow" stroke-width="150" opacity="0.5">
+          <animate id="beamMeUp" attributeName="y2" from="400" to="950" dur="1.5s" begin="hatchOpen.end"fill="freeze"/>
+        </line>
+        <image xlink:href="http://2.bp.blogspot.com/-DV70TzWr-9w/Ux4XsYPBBMI/AAAAAAAAAAM/WX4zzIDzjcw/s1600/lemmling_Cartoon_cow.png" height="50" width="50" x="1000" y="900">
+            <animate id="clickedOn" attributeName="x" from="1000" to="625" dur="2s" begin="click"fill="freeze"/>
+            <animate id="abducted" attributeName="y" from="900" to="400" begin="beamMeUp.end" dur="4s" fill="freeze"/>
+            <animate attributeName="opacity" from="1" to="0" begin="abducted.end" dur="0.5s" fill="freeze"/>
+        </image>
+        <image xlink:href="http://2.bp.blogspot.com/-DV70TzWr-9w/Ux4XsYPBBMI/AAAAAAAAAAM/WX4zzIDzjcw/s1600/lemmling_Cartoon_cow.png" height="50" width="50" x="520" y="900">
+          <animate id="moveLeft" attributeName="x" from="520" to="400" dur="2s" begin="0s;filler2.end" fill="freeze"/>
+          <animate id="filler"attributeName="x" from="400" to="400" dur="3s" begin="moveLeft.end"/>
+          <animate id="moveRight" attributeName="x" from="400" to="520" dur="2s" begin="filler.end" fill="freeze"/>
+          <animate id="filler2"attributeName="x" from="520" to="520" dur="3s" begin="moveRight.end"/>
+        </image>
+        <!--  <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 80 350"
+                          to="180 1200 350"
+                          dur="5s"
+                          repeatCount="indefinite"/>
+        </circle>-->
+    </svg>
+  </body>
+</html>
